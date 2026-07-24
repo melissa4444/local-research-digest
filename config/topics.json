@@ -1,0 +1,15 @@
+{
+  "digest_title": "AI for Edge Security",
+  "description": "Academic papers about applying AI and machine learning to the security of edge computing, IoT, and constrained devices.",
+  "papers_per_source": 5,
+  "sources": {
+    "arxiv": {
+      "enabled": true,
+      "query": "(all:\"edge computing\" OR all:\"edge devices\" OR all:IoT) AND (all:security OR all:cybersecurity) AND (all:\"machine learning\" OR all:\"artificial intelligence\")"
+    },
+    "crossref": {
+      "enabled": true,
+      "query": "edge computing security machine learning"
+    }
+  }
+}

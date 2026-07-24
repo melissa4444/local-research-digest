@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Research Digest: Run all",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/research_digest.py",
+      "args": ["run"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Research Digest: Fetch papers",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/research_digest.py",
+      "args": ["fetch"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Research Digest: Build from saved data",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/research_digest.py",
+      "args": ["build"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}

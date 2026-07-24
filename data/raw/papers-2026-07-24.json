@@ -1,0 +1,87 @@
+[
+  {
+    "source": "arXiv",
+    "title": "Information-Theoretically Secure Aggregation for Lightweight Federated Learning: Resilient to Dropouts and Adversaries",
+    "authors": "Hyeong-Gun Joo, Songnam Hong, Dong-Joon Shin",
+    "published": "2026-07-23",
+    "url": "http://arxiv.org/abs/2607.20890v1",
+    "abstract": "On-device federated learning (FL) enables privacy-preserving and personalized model training on resource-constrained devices such as smartphones and IoT nodes. To reduce communication cost, sign-based methods (e.g., signSGD) transmit one-bit gradients. However, exposing gradient signs makes them vulnerable to inference attacks, while existing secure aggregation schemes are often incompatible with such methods or incur significant computational and communication overhead. We propose a lightweight and information-theoretically secure aggregation framework tailored for sign-based FL. The framework securely computes the majority vote (MV) polynomial through single-round secure multiplication, ensuring end-to-end information-theoretic security under the honest-majority assumption while revealing only the final aggregated sign to the server. To enhance efficiency and scalability, we introduce two key techniques. First, inverse-form exponent reduction halves the effective MV polynomial degree, reducing both communication and computation costs. Second, we propose single-round secure multiplication, achieving linear offline complexity and storage with only a single online communication. Together, these techniques reduce online communication by up to 99.5% and latency by up to 85.7% compared to conventional approaches. Also, by leveraging inherent MDS-code-based decoding, the framework achieves robustness against both dropouts and adversarial behaviors, yielding accuracy gains of up to 20.65% and 10.74%, respectively. Overall, the proposed framework establishes a practical foundation for large-scale, low-latency, and information-theoretically secure aggregation in sign-based FL."
+  },
+  {
+    "source": "arXiv",
+    "title": "Lazy Arithmetic using Systolic Arrays for Closing the Verification Gap on Embedded Systems",
+    "authors": "Taisa Kushner, Ryan McCleeary, Martin Brain",
+    "published": "2026-07-16",
+    "url": "http://arxiv.org/abs/2607.15328v1",
+    "abstract": "Complex algorithms such as deep neural networks are increasingly being deployed on embedded, resource constrained platforms. However, existing hardware and software schemes for implementing these models on the edge fall short, particularly for safety-critical applications such as medical devices. First, hardware such as GPUs, NPUs and TPUs are designed for throughput rather than correctness of computation of security, and are as such susceptible to fault injection attacks. Second, software schemes designed for porting algorithms onto edge devices -- such as quantization schemes -- are either static and sound (non-optimal power consumption), or dynamic yet unsound (non-optimal for safety-critical applications). To address both these needs we propose a both wholly new approach to real-time, dynamic and sound quantization, as well as the hardware to support it. First we developed a sound, real-time adaptive-precision quantization approach utilizing left-to-right arithmetic to pass the most significant bits (MSB) first, and dynamically adjust precision online while performing sensitivity analysis to quantify and manage the risk of decision-boundary crossings. Next, we propose a novel hardware approach utilizing systolic arrays to perform left-to-right arithmetic to generate the MSB first. Together this provides a wholly novel scheme for enabling not only resource-efficient neural networks and artificial intelligence at the edge, but broadly sound and resource-efficient high-precision mathematics on hardware that ensures resilience to bit flip attacks on the most critical bits. This is presented herein as work-in-progress, with software implementations completed and hardware in-progress."
+  },
+  {
+    "source": "arXiv",
+    "title": "Internet of Agentic Things: Networked AI Agents for Closed-Loop IoT Orchestration",
+    "authors": "Quanyan Zhu",
+    "published": "2026-07-14",
+    "url": "http://arxiv.org/abs/2607.12662v1",
+    "abstract": "The paper introduces the Internet of Agentic Things (IoAT), an architectural framework that integrates agentic AI, IoT, cyber-physical systems, Physical AI, edge computing, and digital twins into a unified closed-loop orchestration framework. The proposed architecture consists of cloud, edge/fog, and physical IoT layers connected through autonomous AI agents that perceive, reason, coordinate, and actuate across distributed cyber-physical environments. The paper formalizes IoAT as a coupled workflow-control problem with nested strategic and tactical decision making using a hylomorphic dynamic programming framework that links agentic planning with physical execution. Smart-building orchestration is presented as a representative use case, and key research challenges related to safety, security, governance, resilience, and trustworthy deployment are discussed."
+  },
+  {
+    "source": "arXiv",
+    "title": "Efficient and Privacy Aware Edge Cloud Collaborative Inference for Large Language Models",
+    "authors": "Cheng Li, Jiexiong Liu, Yixuan Chen, Yi Li",
+    "published": "2026-07-14",
+    "url": "http://arxiv.org/abs/2607.13093v4",
+    "abstract": "On-device LLM inference faces a trilemma of response latency, limited hardware resources and user privacy. Full cloud inference delivers strong computing power but exposes user prompts and dialogue data, while standalone on-device inference is unfeasible for most consumer and embedded edge devices. This paper presents a privacy-centric edge-cloud collaborative LLM inference framework built on endpoint-authenticated KV cache. Local endpoints handle input preprocessing, embedding computation, adaptive feature optimization, KV cache authentication, speculative decoding and low-dimensional model head calculation, while the cloud conducts authenticated decoder inference, KV cache management, token verification and high-dimensional vocabulary projection. Endpoints fuse partial outputs, apply language-adaptive masking and sample target tokens. All transmitted data and truncated logits are quantized and AES-GCM encrypted for privacy, with core lightweight modules, draft parameters and cache access policies kept local to avoid leakage. The framework supports heterogeneous devices including CPU-only, GPU-equipped and embedded devices via optimized streaming, batching and quantized ONNX deployment. Evaluations demonstrate that the framework reduces per-token latency by up to 46.1\\% and downlink payloads by up to 67.4\\% over baseline split inference, retaining comparable performance to full cloud inference."
+  },
+  {
+    "source": "arXiv",
+    "title": "Closing the Loop: An Access-Control Architecture for Automated, Anomaly-Driven Network Revocation in IoT Deployments",
+    "authors": "Muhammet Emir Korkmaz, Kemal Bicakci, Yusuf Uzunay",
+    "published": "2026-07-13",
+    "url": "http://arxiv.org/abs/2607.11649v1",
+    "abstract": "Network-based anomaly detection for IoT devices has matured to the point of reporting strong detection accuracy, yet most published systems stop at raising an alert and leave the question of automated enforcement to future work or to a programmable data plane that few real networks operate. This paper presents an access-control architecture that closes that loop using only standard, already-deployed protocols. Devices authenticate via IEEE 802.1X with EAP-TLS, and a RADIUS server acts as a continuous policy decision point capable of evicting an active session via a Change-of-Authorization Disconnect-Request and permanently excluding a device through certificate revocation. A central, contextual access policy engine continuously consumes the anomaly detector's output and actuates this response over a narrowly restricted channel to the RADIUS server; the same engine is designed to be extensible to other access types, though this paper evaluates only the network access-control mechanism. This mechanism is driven by an anomaly signal from a one-class detector adapted from a prior MUD/SDN-based design, replacing its per-flow multi-model pipeline with passive traffic capture and a single fused model that combines a cluster-based, a volumetric, and a protocol-signature score. On a single testbed device, the detector reaches an AUC of 0.9964 and detects all 24 evaluated attack scenarios (eight attack types at three intensities) using roughly 43$\\times$ less training data than the reference design, and the resulting alerts reliably trigger the automated disconnect-then-revoke response, which we measure to evict a device from the network in 335.8\\,ms on average and complete certificate revocation in a further 111.5\\,ms. We report this evaluation as a demonstration of the closed-loop architecture rather than of the detector itself, and discuss multi-device generalization as a concrete next step."
+  },
+  {
+    "source": "Crossref",
+    "title": "Enhancing Edge Computing Security: Advanced Machine Learning Strategies for Malicious Task Detection",
+    "authors": "Mshari Aljumaie, Hoang Dinh, Diep Nguyen",
+    "published": "2024",
+    "url": "https://doi.org/10.2139/ssrn.4868314",
+    "abstract": "",
+    "venue": ""
+  },
+  {
+    "source": "Crossref",
+    "title": "Fog Computing and Its Security Challenges",
+    "authors": "Kamali Gupta, Deepali Gupta, Vinay Kukreja, Vipul Kaushik",
+    "published": "2022-06-09",
+    "url": "https://doi.org/10.1201/9781003143468-1",
+    "abstract": "",
+    "venue": "Machine Learning for Edge Computing"
+  },
+  {
+    "source": "Crossref",
+    "title": "Challenges and opportunities in edge computing architecture using machine learning approaches",
+    "authors": "Naman Bhoj, Robin Singh Bhadoria",
+    "published": "2022",
+    "url": "https://doi.org/10.1016/b978-0-12-824054-0.00002-2",
+    "abstract": "",
+    "venue": "Artificial Intelligence and Machine Learning for EDGE Computing"
+  },
+  {
+    "source": "Crossref",
+    "title": "Machine Learning Based Transformer Health Monitoring Using IoT Edge Computing",
+    "authors": "Imtiyaz Ahmad, Yaduvir Singh, Jameel Ahamad",
+    "published": "2020-10-14",
+    "url": "https://doi.org/10.1109/icccs49678.2020.9276889",
+    "abstract": "",
+    "venue": "2020 5th International Conference on Computing, Communication and Security (ICCCS)"
+  },
+  {
+    "source": "Crossref",
+    "title": "Innovative Applications of Edge Computing and Machine Learning for Enhanced Efficiency and Security",
+    "authors": "Nada Abu Nameh, Sufyan Almajali, Ammar Odeh, Mouhammd Alkasassbeh",
+    "published": "2025-11-07",
+    "url": "https://doi.org/10.1109/edgecom66327.2025.00029",
+    "abstract": "",
+    "venue": "2025 IEEE 11th International Conference on Edge Computing and Scalable Cloud (EdgeCom)"
+  }
+]

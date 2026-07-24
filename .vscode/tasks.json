@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Research Digest: Run all",
+      "type": "shell",
+      "command": "python3",
+      "args": ["src/research_digest.py", "run"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Research Digest: Fetch papers",
+      "type": "shell",
+      "command": "python3",
+      "args": ["src/research_digest.py", "fetch"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Research Digest: Build Markdown",
+      "type": "shell",
+      "command": "python3",
+      "args": ["src/research_digest.py", "build"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
